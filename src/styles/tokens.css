@@ -1,0 +1,78 @@
+:root,
+[data-theme='paper'] {
+  --paper: #f7f6f1;
+  --paper-raised: #fffef9;
+  --ink: #1d211f;
+  --ink-muted: #575d58;
+  --ink-faint: #777a73;
+  --line: #deddd5;
+  --line-strong: #b8b8ae;
+  --accent: #315b72;
+  --accent-strong: #244454;
+  --accent-soft: #dce8ec;
+  --good: #31705a;
+  --warning: #a36c20;
+  --danger: #a5403c;
+  --plum-ink: #88867c;
+  --plum-accent: #67819d;
+  --plum-branch-opacity: 0.13;
+  --plum-blossom-opacity: 0.24;
+  --plum-accent-opacity: 0.38;
+  --selection: rgb(49 91 114 / 16%);
+  --paper-texture-opacity: 0.035;
+  --radius-sm: 4px;
+  --radius-md: 7px;
+  --shadow-soft: 0 18px 48px -24px rgb(29 33 31 / 32%);
+  --space-title-body: 36px;
+  --space-block: 28px;
+  --space-card-padding-x: 24px;
+  --space-card-padding-y: 20px;
+  --space-chart-label: 12px;
+  --font-sans: Inter, 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+  --font-serif: 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', Georgia, serif;
+  --font-display: var(--font-serif);
+  --font-mono: 'Input Mono', 'Maple Mono NF CN', ui-monospace, monospace;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-theme='studio'] {
+  --paper: #f3f5f4;
+  --paper-raised: #ffffff;
+  --ink: #191d24;
+  --ink-muted: #555d68;
+  --ink-faint: #747c84;
+  --line: #d9dddf;
+  --line-strong: #adb4b8;
+  --accent: #0d6b68;
+  --accent-strong: #084d4a;
+  --accent-soft: #d2e9e5;
+  --good: #2f704e;
+  --warning: #a16b15;
+  --danger: #a03f3b;
+  --plum-ink: #777d79;
+  --plum-accent: #0d6b68;
+  --paper-texture-opacity: 0;
+  --font-display: var(--font-sans);
+}
+
+[data-theme='night'] {
+  --paper: #161918;
+  --paper-raised: #1e2220;
+  --ink: #f0f0e9;
+  --ink-muted: #b1b5ad;
+  --ink-faint: #8c918b;
+  --line: #343a37;
+  --line-strong: #59605c;
+  --accent: #7fb7c5;
+  --accent-strong: #a4ced6;
+  --accent-soft: #203b41;
+  --good: #7eb893;
+  --warning: #d7a75e;
+  --danger: #d27670;
+  --plum-ink: #b1b5ad;
+  --plum-accent: #7fb7c5;
+  --plum-branch-opacity: 0.1;
+  --plum-blossom-opacity: 0.2;
+  --plum-accent-opacity: 0.3;
+  --paper-texture-opacity: 0.02;
+}

@@ -1,0 +1,151 @@
+@import 'tailwindcss';
+@import './tokens.css';
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-raised: var(--paper-raised);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-faint: var(--ink-faint);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-soft: var(--accent-soft);
+  --color-good: var(--good);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+  --font-display: var(--font-display);
+  --font-mono: var(--font-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+html {
+  background: #111412;
+  font-family: var(--font-sans);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  color: var(--ink);
+  text-autospace: normal;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  letter-spacing: 0;
+}
+
+::selection {
+  background: var(--selection);
+}
+
+[data-slide-canvas]::after {
+  position: absolute;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+  content: '';
+  opacity: var(--paper-texture-opacity);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.72' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.32'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+}
+
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+.stroke-numeral {
+  color: transparent;
+  -webkit-text-stroke: 2px color-mix(in srgb, var(--ink) 16%, transparent);
+}
+
+.drawn-mark path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: drawn-mark-draw 1.3s cubic-bezier(0.4, 0, 0.25, 1) forwards;
+  animation-delay: calc(var(--stroke-index, 0) * 1.2s);
+}
+
+.drawn-mark-instant path {
+  animation: none;
+  stroke-dashoffset: 0;
+}
+
+@keyframes drawn-mark-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.drawn-mark-loop path {
+  animation: drawn-mark-loop-main 6.6s cubic-bezier(0.4, 0, 0.25, 1) infinite;
+  animation-delay: 0s;
+}
+
+.drawn-mark-loop path:nth-child(2) {
+  animation-name: drawn-mark-loop-dot;
+}
+
+@keyframes drawn-mark-loop-main {
+  0% {
+    stroke-dashoffset: 1;
+  }
+  45%,
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes drawn-mark-loop-dot {
+  0%,
+  46% {
+    stroke-dashoffset: 1;
+  }
+  55%,
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.drawn-mark-redraw path {
+  animation: drawn-mark-draw 1.3s cubic-bezier(0.4, 0, 0.25, 1) forwards;
+  animation-delay: calc(1s + var(--stroke-index, 0) * 1.2s);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

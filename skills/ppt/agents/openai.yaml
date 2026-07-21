@@ -1,0 +1,4 @@
+interface:
+  display_name: "PPT"
+  short_description: "Design original web-native presentations"
+  default_prompt: "Use $ppt to turn my material into an original presentation, explore the right visual direction, and start a local preview."
