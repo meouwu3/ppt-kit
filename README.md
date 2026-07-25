@@ -1,4 +1,4 @@
-# PPT
+# PPT Kit
 
 一套由 AI 创作、网页放映、整图交付的 PPT 系统。仓库根目录是可运行的 Vite 模板，`skills/ppt` 是可通过 skills.sh 单独安装的自包含 skill。每次任务都会生成一个独立项目，不积累演讲列表，也不包含登录或口令。
 
@@ -9,7 +9,7 @@
 仓库上传到 GitHub 后，可安装到 Codex：
 
 ```bash
-npx skills add eggx8/ppt --skill ppt -g -a codex -y
+npx skills add eggx8/ppt-kit --skill ppt -g -a codex -y
 ```
 
 Codex 当前显式调用 skill 的写法是：

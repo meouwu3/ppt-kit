@@ -1,5 +1,5 @@
 {
-  "name": "ppt",
+  "name": "ppt-kit",
   "private": true,
   "version": "0.1.0",
   "description": "Web-native presentations with fast PNG, PDF, and PPTX export",
